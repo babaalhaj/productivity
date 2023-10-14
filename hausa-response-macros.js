@@ -151,6 +151,12 @@ hausaResponses.forEach(input => {
     else if(selectedInput === 10) {hausaMacrosDetails.innerHTML = hausaResponseDetails[9];}
     else if(selectedInput === 11) {hausaMacrosDetails.innerHTML = hausaResponseDetails[10];}
 
+    // Calculate the number of lines in the textarea content
+const numberOfLines = hausaMacrosDetails.value.split('\n').length;
+
+// Set the rows attribute of the textarea to the number of lines + 1 (to ensure at least one empty row)
+hausaMacrosDetails.rows = numberOfLines + 1;
+
 });
 
 });

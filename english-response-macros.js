@@ -143,6 +143,11 @@ englishResponses.forEach(input => {
     else if(selectedInput === 10) {englishMacrosDetails.innerHTML = englishResponseDetails[9];}
     else if(selectedInput === 11) {englishMacrosDetails.innerHTML = englishResponseDetails[10];}
 
+    // Calculate the number of lines in the textarea content
+const numberOfLines = englishMacrosDetails.value.split('\n').length;
+
+// Set the rows attribute of the textarea to the number of lines + 1 (to ensure at least one empty row)
+englishMacrosDetails.rows = numberOfLines + 1;
 });
 
 });

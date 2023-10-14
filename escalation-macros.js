@@ -65,6 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
         else if(selectedInput === 10) {escalationMacrosDetails.innerHTML = escalationResponseDetails[9];}
         else if(selectedInput === 11) {escalationMacrosDetails.innerHTML = escalationResponseDetails[10];}
     
+
+          // Calculate the number of lines in the textarea content
+const numberOfLines = escalationMacrosDetails.value.split('\n').length;
+
+// Set the rows attribute of the textarea to the number of lines + 1 (to ensure at least one empty row)
+escalationMacrosDetails.rows = numberOfLines + 1;
     });
 
 //     // Get the textarea and the copy button element
